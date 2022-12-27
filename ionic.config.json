@@ -1,0 +1,7 @@
+{
+  "name": "NA-Carolina-Ionic-6",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
