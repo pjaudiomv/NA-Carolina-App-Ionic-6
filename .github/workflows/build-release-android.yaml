@@ -1,0 +1,44 @@
+name: Build Release Android
+
+on:
+  push:
+    tags: [ '*' ]
+
+jobs:
+  build:
+    name: Build Release AAB
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+
+      - name: Build Script for android
+        run: ./build.sh -r
+
+      - uses: ilharp/sign-android-release@v1
+        name: Sign Android app AAB
+        id: sign_app
+        with:
+          releaseDir: platforms/android/app/build/outputs/bundle/release
+          signingKey: ${{ secrets.NACAROLINA_KEYSTORE }}
+          keyAlias: key0
+          keyStorePassword: ${{ secrets.NACAROLINA_KEYSTORE_PASSWORD }}
+          keyPassword: ${{ secrets.NACAROLINA_KEYSTORE_PASSWORD }}
+          buildToolsVersion: "30.0.3"
+
+      - name: Upload release bundle
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-release
+          path: ${{steps.sign_app.outputs.signedFile}}

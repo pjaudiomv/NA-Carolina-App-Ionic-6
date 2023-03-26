@@ -1,0 +1,7 @@
+{
+  "name": "NA-Carolina-App-Ionic-6",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

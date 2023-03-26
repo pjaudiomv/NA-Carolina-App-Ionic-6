@@ -1,0 +1,32 @@
+name: Push to https://app.crna.org
+
+on: [push]
+
+jobs:
+  build:
+    name: Push to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Setup java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+
+      - name: Build Script for browser
+        run: ./build.sh -b
+
+      - name: Push to https://app.crna.org
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./platforms/browser/www
+          cname: app.crna.org
