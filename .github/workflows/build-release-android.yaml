@@ -32,7 +32,7 @@ jobs:
         with:
           releaseDir: platforms/android/app/build/outputs/bundle/release
           signingKey: ${{ secrets.NACAROLINA_KEYSTORE }}
-          keyAlias: key0
+          keyAlias: upload
           keyStorePassword: ${{ secrets.NACAROLINA_KEYSTORE_PASSWORD }}
           keyPassword: ${{ secrets.NACAROLINA_KEYSTORE_PASSWORD }}
           buildToolsVersion: "30.0.3"
