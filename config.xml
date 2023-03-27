@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-packageName="org.crna.nacarolina" id="io.cordova.hellocordova" ios-CFBundleIdentifier="org.crna.nacarolina" version="1.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>NA Carolina</name>
+    <description>NA Carolina Information</description>
+    <author email="info@crna.org" href="https://crna.org">NA Carolina</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="ScrollEnabled" value="false" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="android-targetSdkVersion" value="32" />
+    <preference name="android-compileSdkVersion" value="32" />
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyBat66jV9HuFCwXYlpG1yedj5LNKKsgiy0" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyCAXA0a5OvYotRAQb4d77hx60OnFFqChKE" />
+</widget>
