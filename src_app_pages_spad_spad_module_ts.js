@@ -218,7 +218,7 @@ __webpack_require__.r(__webpack_exports__);
 let SpadService = class SpadService {
   constructor(http) {
     this.http = http;
-    this.SpadUrlEnglish = 'https://www.spadna.org';
+    this.SpadUrlEnglish = 'https://spiritualprinciplea.day/';
   }
   getEnglishSPAD() {
     return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__awaiter)(this, void 0, void 0, function* () {
