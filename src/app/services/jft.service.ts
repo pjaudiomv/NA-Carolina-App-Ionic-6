@@ -12,7 +12,7 @@ export class JftService {
     private http: HTTP
   ) { }
 
-  JftUrlEnglish = 'https://justforto.day/';
+  JftUrlEnglish = 'https://justforto.day/?format=table';
 
   async getEnglishJFT() {
     const data = await this.http.get(this.JftUrlEnglish, {}, {});

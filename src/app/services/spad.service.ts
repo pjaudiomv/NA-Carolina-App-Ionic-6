@@ -12,7 +12,7 @@ export class SpadService {
     private http: HTTP
   ) { }
 
-  SpadUrlEnglish = 'https://spiritualprinciplea.day/';
+  SpadUrlEnglish = 'https://spiritualprinciplea.day/?format=table';
 
   async getEnglishSPAD() {
     const data = await this.http.get(this.SpadUrlEnglish, {}, {});
