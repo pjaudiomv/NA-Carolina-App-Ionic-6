@@ -161,7 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 let JftService = class JftService {
   constructor(http) {
     this.http = http;
-    this.JftUrlEnglish = 'https://justforto.day/';
+    this.JftUrlEnglish = 'https://justforto.day/?format=table';
   }
   getEnglishJFT() {
     return (0,tslib__WEBPACK_IMPORTED_MODULE_1__.__awaiter)(this, void 0, void 0, function* () {
